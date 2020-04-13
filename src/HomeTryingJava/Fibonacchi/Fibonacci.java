@@ -15,3 +15,5 @@ public class Fibonacci {
         System.out.println();
     }
 }
+
+// проверь
