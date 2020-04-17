@@ -46,4 +46,6 @@ public class ATM {
     public void setCash100(int cash100) {
         this.cash100 = cash100;
     }
+
+
 }
