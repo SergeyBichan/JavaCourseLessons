@@ -1,18 +1,28 @@
 package HomeTryingJava.task01;
 
+import java.util.Scanner;
+
 public class planetP {
     public static void main(String[] args) {
+
+
         Planet earth = new Planet();
-        earth.setName("Earth!");
-        earth.setSpeed(108000);
-        earth.setHeight(5.9864f);
+        System.out.println("Введите название:\n");
+        earth.setName(Planet.methInputString());
+        System.out.printf("введите скорость:\n");
+        earth.setSpeed(Planet.methInputInt());
+        System.out.println("Введите вес:\n");
+        earth.setHeight(Planet.methInputFloat());
         earth.setAtmosphere(true);
         System.out.println(earth.getName() + " " + earth.getHeight() + " " + earth.getSpeed());
 
         NotPlanet moon = new NotPlanet();
-        moon.setName("Moon");
-        moon.setSpeed(3682);
-        moon.setHeight(7509.3494f);
+        System.out.println("Введите название:\n");
+        moon.setName(Planet.methInputString());
+        System.out.printf("введите скорость:\n");
+        moon.setSpeed(Planet.methInputInt());
+        System.out.println("Введите вес:\n");
+        moon.setHeight(Planet.methInputFloat());
         moon.setAtmosphere(false);
         System.out.println(moon.getName() + " " + moon.getHeight() + " " + moon.getSpeed());
 
