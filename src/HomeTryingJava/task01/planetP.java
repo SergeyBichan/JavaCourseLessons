@@ -5,17 +5,19 @@ import java.util.Scanner;
 public class planetP {
     public static void main(String[] args) {
 
-        PlanetDev planetDev = new PlanetDev();
-        planetDev.invalidatorPlanets();
 
+        PlanetDev earth = new PlanetDev();
+        earth.invalidatorPlanets();
 
-       /* Planet earth = new Planet();
+        PlanetDev moon = new PlanetDev();
+        moon.invalidatorPlanets();
+        /*
         System.out.println("Введите название:\n");
         earth.setName(Planet.methInputString());
         System.out.printf("введите скорость:\n");
         earth.setSpeed(Planet.methInputInt());
         System.out.println("Введите вес:\n");
-        earth.setHeight(Planet.methInputFloat());
+        earth.setHeight(PlanetDev.invalidatorPlanets());
         earth.setAtmosphere(true);
         System.out.println(earth.getName() + " " + earth.getHeight() + " " + earth.getSpeed());
 
@@ -30,11 +32,9 @@ public class planetP {
         System.out.println(moon.getName() + " " + moon.getHeight() + " " + moon.getSpeed());
 
         DecidesForTasks.methToDecide(earth.getAtmosphere());
-        DecidesForTasks.methToDecide(moon.getAtmosphere());*/
+        DecidesForTasks.methToDecide(moon.getAtmosphere());
+        */
+
 
     }
-
-
-
-
 }

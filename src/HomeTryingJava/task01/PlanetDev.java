@@ -7,7 +7,7 @@ public class PlanetDev {
     String name;
     int speed;
     float height;
-    boolean atmosphere;
+    String atmosphere;
 
     public PlanetDev() {
     }
@@ -36,11 +36,14 @@ public class PlanetDev {
         this.height = height;
     }
 
-    public boolean isAtmosphere() {
+//    public boolean isAtmosphere() {
+//        return atmosphere;
+//    }
+    public String getAtmosphere(){
         return atmosphere;
     }
 
-    public void setAtmosphere(boolean atmosphere) {
+    public void setAtmosphere(String atmosphere) {
         this.atmosphere = atmosphere;
     }
 
@@ -64,6 +67,8 @@ public class PlanetDev {
                 setSpeed(in.nextInt());
                 System.out.println("Enter height: ");
                 setHeight(in.nextInt());
+                System.out.println("Atmosphere?");
+                setAtmosphere(in.nextLine());
                 System.out.println("planet added! Thank you.");
                 System.out.println(toString());
 
