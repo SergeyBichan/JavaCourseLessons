@@ -83,7 +83,7 @@ public class NewPlanetScan {
 
                 break;
             case "n":
-                System.out.printf("dosviduli");
+                System.out.println("dosviduli");
                 break;
             default:
                 System.out.println("Incorrect input, try one more time.");
