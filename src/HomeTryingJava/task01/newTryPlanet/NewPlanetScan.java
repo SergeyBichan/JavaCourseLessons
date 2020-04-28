@@ -44,13 +44,6 @@ public class NewPlanetScan {
     public void setSputnikNums(int sputnikNums) {
         this.sputnikNums = sputnikNums;
     }
-    //    public String getType() {
-//        return type;
-//    }
-//
-//    public void setType(String type) {
-//        this.type = type;
-//    }
 
     public String atmosphereChecker(){
         if(sputnikNums < 1){
