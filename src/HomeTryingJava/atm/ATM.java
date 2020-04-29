@@ -2,12 +2,14 @@ package HomeTryingJava.atm;
 
 import java.util.Scanner;
 
-public class ATM {
+/*public class ATM {
     String name;
     int cash20;
     int cash50;
     int cash100;
     int balance;
+    int startCash = 1000;
+    int credit;
 
     public ATM() {
 
@@ -45,38 +47,73 @@ public class ATM {
         this.cash100 = cash100;
     }
 
-    public int getBalance(){
-        return ((getCash20()*20) + (getCash50()*50) + (getCash100()*100));
+    public int getBalance() {
+        return balance;
     }
 
-    public void setBalance(int balance){
-        this.balance = balance;
+    public void setBalance(int balance) {
+        this.balance = balance + startCash;
     }
 
-    public String operationResult(){
-        if (getBalance() > 0){
+    public int takeMoney() {
+        return (getBalance() - ((getCash20() * 20) - (getCash50() * 50) - (getCash100() * 100)));
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public String operationResult(int a, int b) {
+        if (a > b) {
             return "Operation successful!";
-        }
-        else {
+        } else {
             return "Try another way bro";
         }
     }
 
-    public void atmWorkingMethod() {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Hello user!What do you want?");
+    public void atmStartScreen() {
+        System.out.println("Hello user!");
+    }
+
+    public void printMenu() {
+        System.out.println("Make your choice shammy!");
         System.out.println("1. I want to deposit money: ");
         System.out.println("2. I want to take money: ");
         System.out.println("3. I want to see balance: ");
+    }
+
+
+    public void atmWorkingMethod() {
+        Scanner in = new Scanner(System.in);
+        setBalance(in.nextInt());
+        System.out.println(operationResult(getBalance(), startCash));
+        printMenu();
+
         switch (in.nextInt()) {
             case 1:
-                System.out.println("How much bills by 20$ you want to add?");
+                System.out.println("Deposit 20$ to balance");
                 setCash20(in.nextInt());
-                System.out.println("How much bills by 50$ you want to add?");
+                System.out.println("Deposit 50$ to balance");
                 setCash50(in.nextInt());
-                System.out.println("How much bills by 100$ you want to add?");
+                System.out.println("Deposit 100$ to balance");
                 setCash100(in.nextInt());
-                System.out.println(operationResult());
+                System.out.println("Your balance bro is: " + getBalance());
+                System.out.println(operationResult(getBalance(), balance));
+                atmWorkingMethod();
+
+
+//            case 2:
+//                System.out.println("How much money u want to take?");
+//
+//                System.out.println(getBalance());
+//                System.out.println(operationResult(getBalance(), takeMoney()));
+
+
+            case 3:
                 System.out.println(getBalance());
 
 
@@ -85,5 +122,7 @@ public class ATM {
 
 
 }
+*/
+
 
 
