@@ -105,11 +105,16 @@ public class ATMtrySec {
                     atmWork();
                 } else {
                     System.out.println("we dont have money");
+                    System.out.println("You have to add some money");
                     atmWork();
                 }
 
             case 3:
                 System.out.println("Balance is " + balance);
+                atmWork();
+
+            default:
+                System.out.println("Incrorrect input try one more time!");
                 atmWork();
 
         }
