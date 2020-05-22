@@ -4,40 +4,12 @@ package HomeTryingJava.atm;
 import java.util.Scanner;
 
 public class ATMtrySec {
-    int cash20;
-    int cash50;
-    int cash100;
-    int bills20;
-    int bills50;
-    int bills100;
+    int cash20 = 5;
+    int cash50 = 10;
+    int cash100 = 4;
 
-    public int getBills20() {
-        return bills20;
-    }
-
-    public void setBills20(int bills20) {
-        this.bills20 = bills20;
-    }
-
-    public int getBills50() {
-        return bills50;
-    }
-
-    public void setBills50(int bills50) {
-        this.bills50 = bills50;
-    }
-
-    public int getBills100() {
-        return bills100;
-    }
-
-    public void setBills100(int bills100) {
-        this.bills100 = bills100;
-    }
-
-    int cashAtStart = 1000;
-    public int balance = getCash20() + getCash50() + getCash100() + getCashAtStart();
     public int wannaCash;
+    public int balance = getCash20() + getCash50() + getCash100();
 
 
     public ATMtrySec() {
@@ -75,13 +47,6 @@ public class ATMtrySec {
         this.cash100 = cash100;
     }
 
-    public int getCashAtStart() {
-        return cashAtStart;
-    }
-
-    public void setCashAtStart(int cashAtStart) {
-        this.cashAtStart = cashAtStart;
-    }
 
     public int addCash(int a, int b, int c, int d) {
         return a + b + c + d;
@@ -93,7 +58,7 @@ public class ATMtrySec {
 
 
     public void atmStartScreen() {
-        System.out.println("Hello user! We have " + getCashAtStart());
+        System.out.println("Hello user! We have " + getBalance() + "$");
 
     }
 
@@ -102,10 +67,7 @@ public class ATMtrySec {
         System.out.println("2. I want to take money: ");
         System.out.println("3. I want to see balance: ");
     }
-    public int billsNumbers(int a, int b, int c){
 
-
-    }
 
     public void atmWork() {
         Scanner in = new Scanner(System.in);
@@ -119,12 +81,14 @@ public class ATMtrySec {
                 setCash50(in.nextInt());
                 System.out.println("Deposit 100$");
                 setCash100(in.nextInt());
-                balance = addCash(getCash20(), getCash50(), getCash100(), getCashAtStart());
+                balance = addCash(getCash20(), getCash50(), getCash100(), getBalance());
                 System.out.println("Ur balance is " +
                         addCash(getCash20(),
                                 getCash50(),
                                 getCash100(),
-                                getCashAtStart()));
+                                getBalance()));
+                System.out.println("And u have:\n");
+
                 atmWork();
                 break;
             case 2:
@@ -141,11 +105,11 @@ public class ATMtrySec {
                 }
 
             case 3:
-                System.out.println("Balance is " + balance);
+                System.out.println("Balance is " + getBalance());
                 System.out.println("We have:");
-                System.out.println("20$ bills:" + getCash20() +
-                        "\n50$ bills: " + getCash50() +
-                        "\n100$ bills: " + getCash100());
+                System.out.println("20$ bills:" + getCash20() / 20 +
+                        "\n50$ bills: " + getCash50() / 50 +
+                        "\n100$ bills: " + getCash100() / 100);
                 atmWork();
 
             default:
