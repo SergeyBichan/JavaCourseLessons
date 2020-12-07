@@ -102,10 +102,10 @@ public class ATMtrySec {
         System.out.println("2. I want to take money: ");
         System.out.println("3. I want to see balance: ");
     }
-    public int billsNumbers(int a, int b, int c){
-
-
-    }
+//    public int billsNumbers(int a, int b, int c){
+////
+////
+////    }
 
     public void atmWork() {
         Scanner in = new Scanner(System.in);
