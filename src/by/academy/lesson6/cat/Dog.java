@@ -1,6 +1,6 @@
 package by.academy.lesson6.cat;
 
-public class Dog extends Animal {
+public class Dog extends AbstractAnimal {
 
     public Dog(String name, int age) {
         super(name, age);
@@ -11,6 +11,11 @@ public class Dog extends Animal {
 
     public String makeVoice(){
         return "ГАВ";
+    }
+
+    @Override
+    public void go() {
+        System.out.println("Go dog");
     }
 
     @Override
