@@ -5,5 +5,7 @@ public class strStrstr {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("read").append("lol");
         System.out.println(stringBuilder);
+
+
     }
 }
